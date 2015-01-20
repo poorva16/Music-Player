@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player</title>
+	<link rel="stylesheet" type="text/css" href="saha.css">
+	<link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="row" id="music-player">
+	  <div class="row" id="header-container">
+	     <div class="header-group" id="header-first-group">
+	     	<div class="col" id="archive">
+	     		<p>Music Archive</p>
+	     	</div>
+	        <img class="glyphicon-separator" id="glyph-separator" src="separator_vertical.png"/>
+	     </div>
+	     <div class="header-group" id="header-second-group">
+	     	<div class="col" id="genre"></div>
+	     	<div class="col" id="grid">
+	     		<i class="fa fa-align-justify fa-lg"></i>
+	     		<i class="fa fa-th-list fa-lg"></i>
+	     		<i class="fa fa-th fa-lg"></i>
+	     	</div>
+            <img class="glyphicon-separator" id="glyph-separator2" src="separator_vertical.png"/>
+	     </div>
+		    <div class="header-group">
+		    <div class="col" id="search">
+		     	<div class="input-group" id="header-third-group">
+					<i class="fa fa-search"></i>
+			     	<input type="text" placeholder="Search all music" id="input-search">
+		     	</div>
+	     	</div>
+	     </div>
+	  </div>
+
+	  <div class="row" id="cover-container">
+	  	<div class="cover-group" id="cover-background">
+			<img src="cover.jpg" id="cover_img">
+				<div class="col" id="bandname">
+	     			<p>God Is An Astronaut</p>
+	     		</div>
+	  	</div>
+	  	<div class="cover-group" id="cover-slider">
+	  	    	<i class="fa fa-backward fa-lg" id="fa-backward"></i>
+	  	    	<i class="fa fa-play-circle-o fa-3x" id="play"></i>
+            	<i class="fa fa-forward fa-lg" id="fa-forward"></i>
+            	<div id="song-slider">
+            <div class="col" id="empty-slider">
+            	<i class="fa fa-circle" id="fa-circle"></i>
+            </div>
+            <div class="col" id="filled-slider">
+            </div>
+            </div>
+            <div id="vol-slider">
+            <i class="fa fa-volume-down fa-lg" id="fa-volume-down"></i>
+            <div class="col" id="empty-vol-slider">
+            	<i class="fa fa-circle" id="fa-vol-circle"></i>
+            </div>
+            <div class="col" id="filled-vol-slider">
+            </div>
+            </div>
+            <i class="fa fa-refresh" id="fa-refresh"></i>
+            <i class="fa fa-random" id="fa-random"></i>
+	  	</div>
+	  </div>   
+	</div>
+</body>
+</html>
