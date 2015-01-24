@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
 	<title>Player</title>
+	<script src="angular.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="dist/css/saha.css">
 	<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">
+	
 </head>
 <body>
 	<div class="row" id="music-player">
@@ -85,14 +87,16 @@
 			<i class="fa fa-plus-circle fa-lg" id="fa-plus-circle"></i>
 			<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
 	  	</div>
-	  	<div class="col col-list" id="playlist-list">
+	  	<div class="col col-list" id="playlist-list" ng-controller="playlistctrl">
 	  		<ul>
-	  			<li><a href="#">90's Music</a></li>
-	  			<li><a href="#">Inspirational</a></li>
-	  			<li><a href="#">My Top Rated</a></li>
+	  			<li ng-repeat="playlist in list">{{playlist.name}}
+	  			</li>
 	  	 	</ul>
 	  	</div>
 	   </div>
+	     <div class="col" id="album-container">
+    	<div class="col" id="album-cover-container"></div>
+    </div>
 	   <div class="navbar-group" id="right-navbar">
 	  	<div class="col col-name" id="activity">
 	  		<p>ACTIVITY</p>
@@ -107,10 +111,17 @@
 	  	</div>
 	   </div>
     </div>  
-    <div class="row" id="album-container">
-    	<div class="col" id="album-bg-container"></div>
-    	<div class="col" id="album-cover-container"></div>
-    </div>
+  
 	</div>
+	<script>
+	var playlistctrl= function ($scope) {
+		$scope.list =[
+		{name:"90's music"},
+		{name:"Inspirational"},
+		{name:"My Top Rated"},
+		{name:"blah"}
+		];
+	}
+	</script>
 </body>
 </html>
