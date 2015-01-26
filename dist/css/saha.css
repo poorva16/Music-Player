@@ -203,25 +203,30 @@ div#cover-background {
 }
 
 #fa-backward{
-	color: white;
-	padding-top: 20px;
-	margin-left: -96px;
+    color: white;
+	margin-top: 20px;
+	margin-left: 37px;
+	display: inline-block;
 }
 
 #play{
 	color: white;
 	float: left;
 	padding-top: 4px;
-	margin-left: 105px;
-	margin-top: 0px;
+	margin-left: 93px;
+	margin-top: -20px;
 	border-width: 20px;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 #fa-forward{
 	color: white;
-	padding-top: 20px;
-	margin-left: 107px;
+	margin-top: -17px;
+	margin-left: 145px;
 	padding-right: 9px;
+	display: -webkit-box;
+	float: left;
 }
 
 #empty-slider{
@@ -261,7 +266,7 @@ div#cover-background {
 #fa-volume-down{
 	color: white;
 	float: left;
-	margin-left: 820px;
+	margin-left: 965px;
 	margin-top: -16px;
 }
 
@@ -328,12 +333,12 @@ div#cover-background {
 }
 
 #navbar-container .col-list{
-	padding-top: 15px;
-	margin-left: 5px;
+	margin-top: 30px;
+	margin-left: 20px;
 	color: #282828;
 	font-size: 14px;
 	font-family: roboto;
-	padding-left: 10px;
+	padding-left: 0px;
 	font-weight: lighter;
 	text-shadow: 0px 0px 0.5px #a8a8a8;
 	font-weight: 400;
@@ -346,7 +351,7 @@ div#cover-background {
 }
 
 .col-list li{
-	padding-bottom: 22px;
+	padding-bottom: 10px;
 }
 
  a:link {
@@ -358,13 +363,12 @@ div#cover-background {
 	text-decoration: none;
     color: #676767;
 }
- a:hover {
+ li:hover {
 	text-decoration: none;
-    color: #fff;
-    background: #9d9696;
-    padding: 5px;
-    display: block;
-    padding-left: 10px;
+	color: #fff;
+	background: #9d9696;
+	padding: 5px 0px;
+	display: -webkit-box;
    }
 
  a:active {
