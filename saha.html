@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 	<head>
 		<title>Player</title>
@@ -132,4 +133,172 @@
 			
 		</div>
 	</body>
+=======
+<html ng-app>
+<head>
+	<title>Player</title>
+	<script src="angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="dist/css/saha.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">
+	
+</head>
+<body>
+
+	<div class="row" id="music-player">
+	  <div class="row" id="header-container">
+	     <div class="header-group" id="header-first-group">
+	     	<div class="col" id="archive">
+	     		<p>Music Archive</p>
+	     	</div>
+	        <img class="glyphicon-separator" id="glyph-separator" src="dist/images/separator_vertical.png"/>
+	     </div>
+	     <div class="header-group" id="header-second-group">
+	     	<div class="col" id="genre"></div>
+	     	<div class="col" id="grid">
+	     		<i class="fa fa-align-justify fa-lg"></i>
+	     		<i class="fa fa-th-list fa-lg"></i>
+	     		<i class="fa fa-th fa-lg"></i>
+	     	</div>
+            <img class="glyphicon-separator" id="glyph-separator2" src="dist/images/separator_vertical.png"/>
+	     </div>
+		    <div class="header-group">
+		    <div class="col" id="search">
+		     	<div class="input-group" id="header-third-group">
+					<i class="fa fa-search"></i>
+			     	<input type="text" placeholder="Search all music" id="input-search">
+		     	</div>
+	     	</div>
+	     </div>
+	  </div>
+
+	  <div class="row" id="cover-container">
+	  	<div class="cover-group" id="cover-background">
+			<img src="dist/images/cover.jpg" id="cover_img">
+				<div class="col" id="bandname">
+	     			<p>God Is An Astronauts</p>
+	     		</div>
+	  	</div>
+	  	<div class="cover-group" id="cover-slider" ng-controller="coverSliderCtrl">
+		  	<div><i class="fa fa-backward fa-lg" id="fa-backward"></i></div>
+		  	 <div>
+		  	 <audio id="demo" ng-src="ForeverLost.mp3" control></audio>
+			  	<i ng-click="Soundtoggle()" ng-class="{'fa fa-play fa-lg': !play, 'fa fa-pause fa-lg': play}" id="play"></i>
+			  
+			 </div>
+	        <div><i class="fa fa-forward fa-lg" id="fa-forward"></i></div>
+	        <div id="song-slider">
+              <div class="col" id="empty-slider">
+            	<i class="fa fa-circle" id="fa-circle"></i>
+              </div>
+              <div class="col" id="filled-slider"></div>
+            </div>
+            <div id="vol-slider">
+               <div>
+                 <i class="fa fa-volume-down fa-lg" id="fa-volume-down"></i>
+               </div>
+               <div class="col" id="empty-vol-slider">
+            	 <i class="fa fa-circle" id="fa-vol-circle"></i>
+               </div>
+            <div class="col" id="filled-vol-slider"></div>
+            
+            </div>
+
+	            <div><i class="fa fa-refresh" id="fa-refresh"></i></div>
+	            <div><i class="fa fa-random" id="fa-random"></i></div>
+	  	</div>
+	  </div> 
+
+	  <div class="row" id="navbar-container">
+	   <div class="navbar-group" id="left-navbar" ng-controller="leftlistctrl">
+	  	<div class="col col-name" id="genre">
+	  		<p>GENRES</p>
+	  		<div><i ng-model="genreCollapse" ng-click="genreCollapse= !genreCollapse" ng-class="{'fa fa-plus-circle fa-lg': genreCollapse, 'fa fa-minus-circle fa-lg': !genreCollapse}" id="fa-plus-circle"></i></div>
+			<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
+	  	</div>
+	  	<div class="col col-list" id="genres-list" >
+	  		<ul >
+	  			<li ng-show="genreCollapse" ng-repeat="genrelist in lista"><a href="#">{{genrelist.name}}</a></li>
+	  	 	</ul>
+	  	</div>
+	  	
+	  	<div class="col col-name" id="playlist">
+	  		<p>PLAYLISTS</p>
+			<div><i ng-model="palylistCollapse" ng-click="playlistCollapse= !playlistCollapse" ng-class="{'fa fa-plus-circle fa-lg': playlistCollapse, 'fa fa-minus-circle fa-lg': !playlistCollapse}" id="fa-plus-circle"></i></div>
+			<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
+	  	</div>
+	  	<div class="col col-list" id="playlist-list">
+	  		<ul>
+	  			<li ng-show="playlistCollapse" ng-repeat="playlist in listb"><a href="#">{{playlist.name}}
+	  			</a></li>
+	  	 	</ul>
+	  	</div>
+	   </div>
+	     <div class="col" id="album-container">
+    	<div class="col" id="album-cover-container"></div>
+    </div>
+	   <div class="navbar-group" id="right-navbar" ng-controller="rightlistctrl">
+	  	<div class="col col-name" id="activity">
+	  		<p>ACTIVITY</p>
+			<div><i ng-model="activityCollape" ng-click="activityCollapse= !activityCollapse" ng-class="{'fa fa-plus-circle fa-lg': activityCollapse, 'fa fa-minus-circle fa-lg': !activityCollapse}" id="fa-plus-circle"></i></div>
+			<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
+	  	</div>
+	  	<div class="col col-list" id="activity-list">
+	  		<ul>
+	  			<li><a href="#">Arcade fire announces new album Release Date</a></li>
+	  			
+	  	 	</ul>
+	  	</div>
+	   </div>
+    </div>  
+  
+	</div>
+          
+
+	<script>
+	var leftlistctrl= function ($scope) {
+		$scope.listb =[
+		{name:"90's music"},
+		{name:"Inspirational"},
+		{name:"My Top Rated"},
+		{name:"blah"}
+		];
+
+		$scope.lista=[
+		{name:"blues"},
+		{name:"jazz"},
+		{name:"pop"},
+		{name:"post rock"}	
+	   ];
+
+	    $scope.genreCollapse= true;
+        $scope.playlistCollapse= true;
+    }
+
+	  var coverSliderCtrl = function ($scope){
+	  	    $scope.Soundtoggle=function(){
+	  	    $scope.play= !$scope.play;
+	   	   
+
+	   	  if($scope.play==true){
+	   	  
+	   	  	document.getElementById('demo').play();
+
+	   	  	}
+
+	   	  else{
+	   	  document.getElementById('demo').pause();
+	   	  }
+	   	}
+	   	}
+
+        
+       
+
+   var rightlistctrl= function( $scope){
+   	$scope.activityCollapse= true;
+   }
+
+</script>
+</body>
+>>>>>>> 8e25c8fd2d089b2ccf58528c246245659206db4b
 </html>
