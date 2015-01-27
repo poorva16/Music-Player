@@ -1,116 +1,135 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Player</title>
-	<link rel="stylesheet" type="text/css" href="dist/css/saha.css">
-	<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">
-</head>
-<body>
-	<div class="row" id="music-player">
-	  <div class="row" id="header-container">
-	     <div class="header-group" id="header-first-group">
-	     	<div class="col" id="archive">
-	     		<p>Music Archive</p>
-	     	</div>
-	        <img class="glyphicon-separator" id="glyph-separator" src="dist/images/separator_vertical.png"/>
-	     </div>
-	     <div class="header-group" id="header-second-group">
-	     	<div class="col" id="genre"></div>
-	     	<div class="col" id="grid">
-	     		<i class="fa fa-align-justify fa-lg"></i>
-	     		<i class="fa fa-th-list fa-lg"></i>
-	     		<i class="fa fa-th fa-lg"></i>
-	     	</div>
-            <img class="glyphicon-separator" id="glyph-separator2" src="dist/images/separator_vertical.png"/>
-	     </div>
-		    <div class="header-group">
-		    <div class="col" id="search">
-		     	<div class="input-group" id="header-third-group">
-					<i class="fa fa-search"></i>
-			     	<input type="text" placeholder="Search all music" id="input-search">
-		     	</div>
-	     	</div>
-	     </div>
-	  </div>
-
-	  <div class="row" id="cover-container">
-	  	<div class="cover-group" id="cover-background">
-			<img src="dist/images/cover.jpg" id="cover_img">
-				<div class="col" id="bandname">
-	     			<p>God Is An Astronauts</p>
-	     		</div>
-	  	</div>
-	  	<div class="cover-group" id="cover-slider">
-	  	    	<i class="fa fa-backward fa-lg" id="fa-backward"></i>
-	  	    	<i class="fa fa-play-circle-o fa-3x" id="play"></i>
-            	<i class="fa fa-forward fa-lg" id="fa-forward"></i>
-            	<div id="song-slider">
-            <div class="col" id="empty-slider">
-            	<i class="fa fa-circle" id="fa-circle"></i>
-            </div>
-            <div class="col" id="filled-slider">
-            </div>
-            </div>
-            <div id="vol-slider">
-            <i class="fa fa-volume-down fa-lg" id="fa-volume-down"></i>
-            <div class="col" id="empty-vol-slider">
-            	<i class="fa fa-circle" id="fa-vol-circle"></i>
-            </div>
-            <div class="col" id="filled-vol-slider">
-            </div>
-            </div>
-            <i class="fa fa-refresh" id="fa-refresh"></i>
-            <i class="fa fa-random" id="fa-random"></i>
-	  	</div>
-	  </div> 
-
-	  <div class="row" id="navbar-container">
-	   <div class="navbar-group" id="left-navbar">
-	  	<div class="col col-name" id="genre">
-	  		<p>GENRES</p>
-			<i class="fa fa-plus-circle fa-lg" id="fa-plus-circle"></i>
-			<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
-	  	</div>
-	  	<div class="col col-list" id="genres-list">
-	  		<ul>
-	  			<li><a href="#">Alternative and Indies</a></li>
-	  			<li><a href="#">Blues</a></li>
-	  			<li><a href="#">Jazz</a></li>
-	  			<li><a href="#">Pop</a></li>
-	  			<li><a href="#">Post Rock</a></li>
-	  	 	</ul>
-	  	</div>
-	  	<div class="col col-name" id="playlist">
-	  		<p>PLAYLISTS</p>
-			<i class="fa fa-plus-circle fa-lg" id="fa-plus-circle"></i>
-			<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
-	  	</div>
-	  	<div class="col col-list" id="playlist-list">
-	  		<ul>
-	  			<li><a href="#">90's Music</a></li>
-	  			<li><a href="#">Inspirational</a></li>
-	  			<li><a href="#">My Top Rated</a></li>
-	  	 	</ul>
-	  	</div>
-	   </div>
-	   <div class="navbar-group" id="right-navbar">
-	  	<div class="col col-name" id="activity">
-	  		<p>ACTIVITY</p>
-			<i class="fa fa-plus-circle fa-lg" id="fa-plus-circle"></i>
-			<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
-	  	</div>
-	  	<div class="col col-list" id="activity-list">
-	  		<ul>
-	  			<li><a href="#">Arcade fire announces new album Release Date</a></li>
-	  			
-	  	 	</ul>
-	  	</div>
-	   </div>
-    </div>  
-    <div class="row" id="album-container">
-    	<div class="col" id="album-bg-container"></div>
-    	<div class="col" id="album-cover-container"></div>
-    </div>
-	</div>
-</body>
+	<head>
+		<title>Player</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="dist/css/saha.css">
+	</head>
+	<body>
+		<div class="row" id="music-player">
+			<div class="row" id="header-container">
+				<div class="header-group" id="header-first-group">
+					<div class="col" id="archive">
+						<p>Music Archive</p>
+					</div>
+					<img class="glyphicon-separator" id="glyph-separator" src="dist/images/separator_vertical.png"/>
+				</div>
+				<div class="header-group" id="header-second-group">
+					<div class="col" id="genre"></div>
+					<div class="col" id="grid">
+						<i class="fa fa-align-justify fa-lg"></i>
+						<i class="fa fa-th-list fa-lg"></i>
+						<i class="fa fa-th fa-lg"></i>
+					</div>
+					<img class="glyphicon-separator" id="glyph-separator2" src="dist/images/separator_vertical.png"/>
+				</div>
+				<div class="header-group">
+					<div class="col" id="search">
+						<div class="input-group" id="header-third-group">
+							<i class="fa fa-search"></i>
+							<input type="text" placeholder="Search all music" id="input-search">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="cover-container">
+				<div class="cover-group" id="cover-background">
+					<img src="dist/images/cover.jpg" id="cover_img">
+					<div class="col" id="bandname">
+						<p>God Is An Astronauts</p>
+					</div>
+				</div>
+				<div class="cover-group" id="cover-slider">
+					<i class="fa fa-backward fa-lg" id="fa-backward"></i>
+					<i class="fa fa-play fa-lg" id="play"></i>
+					<i class="fa fa-forward fa-lg" id="fa-forward"></i>
+					<div id="song-slider">
+						<div class="col" id="empty-slider">
+							<i class="fa fa-circle" id="fa-circle"></i>
+						</div>
+						<div class="col" id="filled-slider">
+						</div>
+					</div>
+					<div id="vol-slider">
+						<i class="fa fa-volume-down fa-lg" id="fa-volume-down"></i>
+						<div class="col" id="empty-vol-slider">
+							<i class="fa fa-circle" id="fa-vol-circle"></i>
+						</div>
+						<div class="col" id="filled-vol-slider">
+						</div>
+					</div>
+					<i class="fa fa-refresh" id="fa-refresh"></i>
+					<i class="fa fa-random" id="fa-random"></i>
+				</div>
+			</div>
+			<div class="row" id="list-container">
+				<div class="col-xs-2">
+					<div class="navbar-group" id="left-navbar">
+						<div class="col-name" id="genre">
+							<div class="col-xs-10">
+								<h4>Genres</h4>
+							</div>
+							<div class="col-xs-2">
+								<i class="fa fa-plus-circle fa-lg" id="fa-plus-circle"></i>
+							</div>
+						</div>
+						<div class="row">
+							<hr>
+						</div>
+						<div class="" id="genres-list">
+							<ul>
+								<li>Alternative & Indie</li>
+								<li>Blues</li>
+								<li>Jazz</li>
+								<li>Pop</li>
+								<li>Rap & Hip-Hop</li>
+								<li>Shoe Gaze</li>
+							</ul>
+						</div>
+						<div class="col-name" id="playlist">
+							<div class="col-xs-10">
+								<h4>PLAYLISTS</h4>
+							</div>
+							<div class="col-xs-2">
+								<i class="fa fa-plus-circle fa-lg" id="fa-plus-circle"></i>
+							</div>
+							<div class="row">
+								<hr>
+							</div>
+						</div>
+						<div class="col-list" id="playlist-list">
+							<ul>
+								<li>90's Music</li>
+								<li>Inspirational</li>
+								<li>My Top Rated</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="row" id="album-container">
+						<div class="" id="album-bg-container"></div>
+						<div class="" id="album-cover-container"></div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="navbar-group" id="right-navbar">
+						<div class="col col-name" id="activity">
+							<p>ACTIVITY</p>
+							<i class="fa fa-plus-circle fa-lg" id="fa-plus-circle"></i>
+							<img src="dist/images/horizontal_divider.png" id="horizontal_divider">
+						</div>
+						<div class="col col-list" id="activity-list">
+							<ul>
+								<li><a href="#">Arcade fire announces new album Release Date</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
 </html>
