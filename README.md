@@ -16,6 +16,7 @@ User will get RSS feed on latest updates.
 > [Poorva Arora] : Handling client side activities and optimized working of the software client on different platform.
 
 > [Sahil Narula] :  Working on backend scripts, multimedia database and restful APIs.
+
 #### 3. Feasibility Study
 - The software client will target every possible platform including linux, unix system and web operating system.
 - Timeline: The project has already been started. The frontend of the project will be completed within few weeks and following weeks will be devoted to backend.
