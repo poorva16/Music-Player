@@ -64,6 +64,20 @@ $ bower install
  - Client Side Music player functionality
  - Web to Software porting
 
+
+### Gantt chart
+
+![alt tag](https://raw.githubusercontent.com/poorva16/Music-Player/master/documentation/gant.png)
+
+### Pert chart
+
+![alt tag](https://raw.githubusercontent.com/poorva16/Music-Player/master/documentation/pert.png)
+
+### Timeline
+
+![alt tag](https://raw.githubusercontent.com/poorva16/Music-Player/master/documentation/timeline.png)
+
+
 **Hell Yeah!**
 
 [Nodejs]:http://nodejs.org
