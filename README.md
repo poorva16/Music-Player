@@ -1,6 +1,5 @@
 # Music-Player
 Music player built with web languages using angular.
-
 # Project Plan
 #### Version
 1.0.0
@@ -60,18 +59,17 @@ $ bower install
 ### Todo's
 
  - Restful Api's
-  - Multimedia Database
-   - Client Side Music player functionality
-    - Web to Software porting
+ - Multimedia Database
+ - Client Side Music player functionality
+ - Web to Software porting
 
-    **Hell Yeah!**
+**Hell Yeah!**
 
-    [Nodejs]:http://nodejs.org
-    [Angularjs]:http://angularjs.org
-    [Mongodb]:http://www.mongodb.org/
-    [hadoop]:http://hadoop.apache.org/
-    [Twitter Bootstrap]:http://twitter.github.com/bootstrap/
-    [express]:http://expressjs.com
-    [Poorva Arora]:http://github.com/poorva16
-    [Sahil Narula]:http://github.com/sahanarula
-
+[Nodejs]:http://nodejs.org
+[Angularjs]:http://angularjs.org
+[Mongodb]:http://www.mongodb.org/
+[hadoop]:http://hadoop.apache.org/
+[Twitter Bootstrap]:http://twitter.github.com/bootstrap/
+[express]:http://expressjs.com
+[Poorva Arora]:http://github.com/poorva16
+[Sahil Narula]:http://github.com/sahanarula
