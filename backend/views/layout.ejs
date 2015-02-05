@@ -22,13 +22,17 @@
         
         To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
         For example, here are a few things you could do:
-            
+            p
             + Change the order of your CSS files
             + Import stylesheets from other directories
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
+    <!-- bower_components css files -->
+    <link rel="stylesheet" type="text/css" href="/bower_components/materialize/dist/css/materialize.min.css">
+    <!-- bower_components css files end -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
   </head>
 
@@ -59,6 +63,7 @@
     -->
 
     <!--TEMPLATES-->
+    
     <!--TEMPLATES END-->
 
 
@@ -86,6 +91,8 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/custom.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "music-player-backend",
+  "version": "0.0.0",
+  "homepage": "https://github.com/poorva16/Music-Player",
+  "authors": [
+    "sahanarula <sahiln123@gmail.com>"
+  ],
+  "description": "Music player back-end api",
+  "keywords": [
+    "music",
+    "player",
+    "sahil",
+    "narula",
+    "poorva",
+    "arora"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "~0.95.1"
+  }
+}
