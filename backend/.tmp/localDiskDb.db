@@ -1,6 +1,17 @@
 {
   "data": {
-    "users": []
+    "users": [
+      {
+        "first_name": "sahil",
+        "last_name": "narula",
+        "address": "alo alo",
+        "email": "sahiln123@gmail.com",
+        "password": "alloallo",
+        "createdAt": "2015-02-06T10:24:53.133Z",
+        "updatedAt": "2015-02-06T10:24:53.133Z",
+        "id": 1
+      }
+    ]
   },
   "schema": {
     "users": {
@@ -19,6 +30,8 @@
     }
   },
   "counters": {
-    "users": {}
+    "users": {
+      "id": 1
+    }
   }
 }

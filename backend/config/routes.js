@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,19 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+
+  /***************************************************************************
+  *                                                                          *
+  * Users specific routes...                                                    *
+  *                                                                          *
+  ***************************************************************************/
+
+  '/users': 'UsersController.main',
+  'GET /users/login': 'UsersController.renderLogin',
+  'POST /users/login': 'UsersController.login',
+  'GET /users/signup': 'UsersController.signup',
+  'GET /users/list': 'UsersController.usersList'
+
 
 };
